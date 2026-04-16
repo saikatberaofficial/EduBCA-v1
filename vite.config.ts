@@ -2,7 +2,12 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
-
+// vite.config.ts
+export default defineConfig({
+  base: 'https://saikatberaofficial.github.io/EduBCA-v1/', // Replace with your actual repository name
+  plugins: [react()],
+  // ... other config
+})
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
