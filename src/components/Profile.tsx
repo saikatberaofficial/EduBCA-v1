@@ -277,7 +277,7 @@ export default function Profile() {
 
           <div className="pt-8 flex flex-col items-center">
             <div className="w-12 h-12 bg-zinc-900 rounded-xl flex items-center justify-center mb-2">
-              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" className="w-8 h-8 object-contain invert" />
+              <img src="logo.png" alt="Logo" className="w-8 h-8 object-contain invert" />
             </div>
             <span className="text-[8px] font-black text-zinc-400 uppercase tracking-[0.3em]">EduBCA Intelligent Attendance</span>
           </div>
