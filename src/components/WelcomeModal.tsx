@@ -24,7 +24,7 @@ export default function WelcomeModal() {
         <div className="p-8 md:p-12 text-center">
           <div className="w-32 h-32 bg-white rounded-[2rem] flex items-center justify-center overflow-hidden mx-auto mb-8 shadow-2xl border border-zinc-100 p-2">
             <img 
-              src="/logo.png" 
+              src={`${import.meta.env.BASE_URL}logo.png`} 
               alt="EduBCA Logo" 
               className="w-full h-full object-contain"
             />

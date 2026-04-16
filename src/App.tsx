@@ -41,7 +41,7 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center overflow-hidden shadow-sm border border-zinc-100 p-1">
               <img 
-                src="/logo.png" 
+                src={`${import.meta.env.BASE_URL}logo.png`} 
                 alt="EduBCA Logo" 
                 className="w-full h-full object-contain"
               />
