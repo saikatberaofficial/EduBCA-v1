@@ -2,15 +2,11 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
-// vite.config.ts
-export default defineConfig({
-  base: 'https://saikatberaofficial.github.io/EduBCA-v1/', // Replace with your actual repository name
-  plugins: [react()],
-  // ... other config
-})
+
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
+    base: '/EduBCA-v1/',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
