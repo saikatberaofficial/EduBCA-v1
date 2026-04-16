@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #00B4FF;
+  --color-primary-hover: #0096d6;
+  --color-primary-light: #E0F7FF;
+  --color-bg-main: #f8fafc;
+  --color-card-bg: #ffffff;
+  --color-status-present: #10b981;
+  --color-status-absent: #ef4444;
+  --color-status-late: #f59e0b;
+}
+
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  .card-shadow {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  }
+  .card-shadow-lg {
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.1);
+  }
+  .nav-blur {
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg-main text-zinc-900 transition-colors duration-300 antialiased;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
